@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+    遞迴
+*/
 
 void bangla(long long int a)
 {
@@ -24,7 +27,7 @@ void bangla(long long int a)
         printf(" %lld shata", a/100);
         a = a%100;
     }
-    if(a)
+    if(a) //這樣寫可以避免0的情況(不這樣寫有可能會報錯)
     {
         printf(" %lld", a);
     }
