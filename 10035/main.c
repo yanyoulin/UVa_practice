@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
         int carry = 0, count = 0, sum = 0;
         while(a || b)
         {
-            sum = a%10 + b%10 + carry;
-            if ((sum/10) != 0)
+            sum = a%10 + b%10 + carry; //每一位做加法
+            if ((sum/10) != 0) //代表有進位
                 carry = 1;
             else
                 carry = 0;
