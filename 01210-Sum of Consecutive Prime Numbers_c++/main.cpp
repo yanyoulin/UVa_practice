@@ -8,7 +8,7 @@ int main()
 {
     int p[10000] = {0};
     vector <int> v;
-    for(int i = 2; i<10000; i++) //窮舉質數法
+    for(int i = 2; i<10000; i++) //撱箄釭��貉”
     {
         if(p[i] == 0)
         {
