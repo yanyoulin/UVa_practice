@@ -5,16 +5,16 @@
 using namespace std;
 
 char a[101][101];
-int dx[8] = {-1, 0, 1,-1, 1,-1, 0, 1}; //¥H«K±´¯Á¤K­Ó¤è¦V
+int dx[8] = {-1, 0, 1,-1, 1,-1, 0, 1}; //ä»¥ä¾¿æŽ¢ç´¢å…«å€‹æ–¹å‘
 int dy[8] = {-1,-1,-1, 0, 0, 1, 1, 1};
 int m, n;
-void dfs(int x, int y) //³oÃä¿ï¾Ü¥Îdfs¡Abfs¤]¥i¥H
+void dfs(int x, int y) //é€™é‚Šé¸æ“‡ç”¨dfsï¼Œbfsä¹Ÿå¯ä»¥
 {
-    if(x>n || x<0 || y>m || y<0)
+    if(x>=n || x<0 || y>=m || y<0)
         return;
     if(a[x][y] != '@')
         return;
-    a[x][y] = '*'; //±N@Âà¦¨*
+    a[x][y] = '*'; //å°‡@è½‰æˆ*
     for(int i = 0; i<8; i++)
         dfs(x + dx[i], y + dy[i]); //dfs
 }
@@ -36,7 +36,7 @@ int main()
                 if(a[j][i] == '@')
                 {
                     dfs(j, i);
-                    cnt++; //¤@­Óªo¥Ð±´¯Á§¹«á´N+1
+                    cnt++; //ä¸€å€‹æ²¹ç”°æŽ¢ç´¢å®Œå¾Œå°±+1
                 }
             }
         }
