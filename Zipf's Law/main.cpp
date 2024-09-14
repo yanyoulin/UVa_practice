@@ -4,7 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-//°Ñ¦Ò00245-Uncompress
+//åƒè€ƒ00245-Uncompress
 int main()
 {
     int n;
@@ -19,10 +19,10 @@ int main()
         {
             if(isalpha(s[i]))
             {
-                s[i] = tolower(s[i]); //­n¥ş¤p¼g
+                s[i] = tolower(s[i]); //è¦å…¨å°å¯«
                 w+=s[i];
             }
-            else if(s[i] == '-') //§Ú­Ì¨S¦³­nÅª§@ªÌ¦W
+            else if(s[i] == '-') //æˆ‘å€‘æ²’æœ‰è¦è®€ä½œè€…å
             {
                 break;
             }
